@@ -27,7 +27,7 @@ function IDLWPage() {
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" style={{ filter: 'saturate(0.85)' }}>
           <source src="/001-IDLW.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-zinc-950/75" />
+        <div className="absolute inset-0 bg-zinc-950/85" />
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, transparent 0%, transparent 40%, rgba(9, 9, 11, 0.3) 100%)' }} />
       </div>
       <div className="motion-reduce:block hidden fixed inset-0 bg-zinc-950" />
@@ -110,7 +110,7 @@ function TheSimplePlanPage() {
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" style={{ filter: 'saturate(0.85)' }}>
           <source src="/02-TheSimplePlan.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-zinc-950/75" />
+        <div className="absolute inset-0 bg-zinc-950/85" />
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, transparent 0%, transparent 40%, rgba(9, 9, 11, 0.3) 100%)' }} />
       </div>
       <div className="motion-reduce:block hidden fixed inset-0 bg-zinc-950" />
@@ -215,7 +215,7 @@ function AdvoCassiePage() {
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" style={{ filter: 'saturate(0.85)' }}>
           <source src="/03-Advo-Cassie.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-zinc-950/75" />
+        <div className="absolute inset-0 bg-zinc-950/85" />
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, transparent 0%, transparent 40%, rgba(9, 9, 11, 0.3) 100%)' }} />
       </div>
       <div className="motion-reduce:block hidden fixed inset-0 bg-zinc-950" />

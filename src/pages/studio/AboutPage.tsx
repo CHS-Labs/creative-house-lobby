@@ -44,6 +44,9 @@ export function AboutPage() {
             <p className="text-xl text-zinc-400 font-light italic leading-relaxed">
               "We don't just make films. We build the systems that help stories reach the world."
             </p>
+            <p className="text-sm tracking-[0.2em] text-zinc-500 uppercase mt-6">
+              Stories that move people. Systems that move culture.
+            </p>
           </div>
 
           {/* Sections */}
