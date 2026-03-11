@@ -78,7 +78,7 @@ export function CreativeHouseLobby() {
           <source src="/00-Hero-cover.mp4" type="video/mp4" />
         </video>
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/65" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/55 to-black/80" />
 
         <div className="relative z-10 text-center px-6 max-w-6xl">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-tight leading-none text-white mb-0 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
@@ -113,15 +113,17 @@ export function CreativeHouseLobby() {
       {/* ── SECTION 2: CHOOSE YOUR PATH (mirrors "Follow the Water") ─────── */}
       <section
         ref={doorsRef}
-        className="relative py-24 px-6 overflow-hidden bg-gradient-to-br from-[#1C1410] via-[#2A1F14] to-[#1C1410]"
+        className="relative py-24 px-6 overflow-hidden"
       >
-        {/* Animated subtle texture overlay */}
-        <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.08),transparent_50%)] animate-pulse"
-            style={{ animationDuration: '4s' }}
-          />
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A0A]/95 via-[#111111]/90 to-[#0A0A0A]/95" />
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage:
+              'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.03) 2px, rgba(255,255,255,0.03) 4px)',
+          }}
+        />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,151,42,0.06),transparent_65%)]" />
 
         {/* Top accent */}
         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#C9972A]/40 to-transparent" />
@@ -184,14 +186,17 @@ export function CreativeHouseLobby() {
 
       {/* ── SECTION 3: FEATURED SPOTLIGHT (mirrors "Watershed Wednesdays") ─ */}
       <section className="relative overflow-hidden py-28 md:py-36">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A0A]/95 via-[#111111]/90 to-[#0A0A0A]/95" />
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage:
-              'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.03) 2px, rgba(255,255,255,0.03) 4px)',
-          }}
-        />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover motion-reduce:hidden"
+          style={{ filter: 'saturate(0.5) brightness(0.5)' }}
+        >
+          <source src="/credibility-spine-bg.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-[#0A0A0A]/70" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,151,42,0.06),transparent_65%)]" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
