@@ -80,6 +80,25 @@ export function MovementIndex() {
           ))}
         </div>
 
+        {/* ── CONTEXT NOTE ────────────────────────────────────────────────── */}
+        <div className="mt-24 pt-16 border-t border-zinc-900 grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <h3 className="text-xl text-zinc-300 font-light mb-4">What is a Creative House Project?</h3>
+            <p className="text-sm text-zinc-500 font-light leading-relaxed">
+              Each project is a fully-realized storytelling ecosystem — built on the Creative House Credibility Spine, delivered through a dedicated Lobby Engine, and amplified through automated distribution systems.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl text-zinc-300 font-light mb-4">Proposing a Project</h3>
+            <p className="text-sm text-zinc-500 font-light leading-relaxed">
+              Creative House builds project universes for movements, causes, and investigations that have credibility behind them. If you have a story,{' '}
+              <Link to="/collaborate" className="text-zinc-300 hover:text-zinc-100 transition-colors">
+                start a conversation
+              </Link>.
+            </p>
+          </div>
+        </div>
+
       </div>
     </main>
   );
