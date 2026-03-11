@@ -5,6 +5,7 @@ import { MovementPage } from './pages/movements/MovementPage';
 import { StoryLibrary } from './pages/StoryLibrary';
 import { CreatorNetwork } from './pages/CreatorNetwork';
 import { WorkWithUs } from './pages/WorkWithUs';
+import { WorkWithUsPage } from './pages/WorkWithUsPage';
 import { VoicesIntroPage } from './pages/VoicesIntroPage';
 import { StudioLandingPage } from './pages/studio/StudioLandingPage';
 import { ProductionsPage } from './pages/studio/ProductionsPage';
@@ -27,6 +28,7 @@ function App() {
       <Route path="/studio/systems" element={<SystemsPage />} />
       <Route path="/studio/about" element={<AboutPage />} />
       <Route path="/collaborate" element={<WorkWithUs />} />
+      <Route path="/work-with-us" element={<WorkWithUsPage />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
