@@ -229,10 +229,10 @@ export function CreativeHouseLobby() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-semibold text-white mb-4">
-              Proof in the Network
+              Real Stories in Motion
             </h2>
             <p className="text-xl text-[#C9972A]/80 font-light mb-3">
-              Real worlds. Real projects. Real momentum.
+              Real places. Real projects. Real momentum.
             </p>
             <p className="text-sm text-white/30">
               {networkPoints.length} active story universes
