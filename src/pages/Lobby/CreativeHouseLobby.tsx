@@ -99,7 +99,7 @@ export function CreativeHouseLobby() {
 
           <button
             onClick={scrollToDoors}
-            className="px-10 py-3 bg-white/10 backdrop-blur-sm border border-white/60 rounded-full text-white hover:bg-white hover:text-[#0A0A0A] transition-all duration-300 text-base font-light shadow-lg"
+            className="px-10 py-3 bg-white/10 backdrop-blur-sm border border-white/60 rounded-sm text-white hover:bg-white hover:text-[#0A0A0A] transition-all duration-300 text-base font-light shadow-lg"
           >
             Enter the Lobby
           </button>
@@ -210,7 +210,7 @@ export function CreativeHouseLobby() {
           <div className="mt-8 mb-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/studio"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-white/10 backdrop-blur-sm border border-white/40 rounded-full text-white hover:bg-white hover:text-[#0A0A0A] transition-all duration-300 text-base font-light"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-white/10 backdrop-blur-sm border border-white/40 rounded-sm text-white hover:bg-white hover:text-[#0A0A0A] transition-all duration-300 text-base font-light"
             >
               Enter Production Studio
             </Link>

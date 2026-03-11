@@ -1,76 +1,148 @@
-# Creative House Studios
-## The Infrastructure Behind Story Movements
+# Creative House Lobby — Vision Document
+## The Master Entry Point for the Creative House Network
+
+**Last Updated:** 2026-03-10
+**Status:** Live — https://creative-house-studios-2.vercel.app
+**GitHub:** https://github.com/CreativeHouseStudios/creative-house-lobby
 
 ---
 
-Creative House Studios is not a traditional production company and not a marketing agency. It is a story amplification infrastructure designed to help important movements, creators, and investigations reach the world.
+## What This Is
 
-Creative House builds the systems that allow credible stories to be discovered, verified, and distributed across multiple platforms.
+The Creative House Lobby is the master navigation hub for the Creative House Studios network.
 
-The studio operates through three interconnected layers.
+It is not a website. It is not a portfolio. It is a cinematic entry point — the front door through which visitors discover the movements, productions, and creators that Creative House stewards.
 
----
-
-## Layer 1 — The Credibility Spine
-
-The Credibility Spine is the data layer.
-
-It collects and organizes stories, sources, research, and creator contributions into a structured database.
-
-Stories are mapped geographically and categorized by theme, allowing movements to demonstrate both reach and legitimacy.
-
-This spine powers every Creative House storytelling universe.
+This lobby follows the same architectural pattern as the IDLW Lobby: five sections, a video hero arrival, glassmorphism door cards, a spotlight section, an SVG network constellation, and a footer.
 
 ---
 
-## Layer 2 — Lobby Engines
+## Architecture
 
-A Lobby is the entry point into a storytelling universe.
+### The 3 Doors
 
-Visitors arrive in a cinematic environment where they can explore stories, projects, and movements.
+Visitors enter through one of three doors:
 
-Each lobby routes visitors into themed verticals.
+| Door | Route | Description |
+|------|-------|-------------|
+| Story Universes | `/movements` | The movements Creative House supports — IDLW, The Simple Plan, Advo-Cassie |
+| Production Studio | `/studio` | Films, documentaries, and the production slate |
+| Voices Network | `/voices` | Creators, researchers, and storytellers building with CHS |
 
-**Examples:**
-
-- **I Drink Living Water** — water, health, environment
-- **The Simple Plan** — political reform
-- **Advo-Cassie** — justice advocacy
-
-The lobby is both a navigation system and a storytelling device.
+> **Note:** A dedicated `/production` route is planned for Phase 2. Both the "Production Studio" door and footer link currently point to `/studio`.
 
 ---
 
-## Layer 3 — Distribution Systems
+## The 5-Section Structure (IDLW Pattern)
 
-Creative House also builds automated distribution systems.
+### Section 1 — Cinematic Arrival
+Full-screen video hero (`00-Hero-cover.mp4`). Title, tagline, and "Enter the Lobby" CTA that smooth-scrolls to Section 2.
 
-These systems publish and amplify stories across multiple platforms including:
+### Section 2 — Choose Your Path
+Warm gold gradient band (`from-[#1C1410] via-[#2A1F14]`). Three glassmorphism door cards with ripple hover animation. Each card navigates to a primary route.
 
-- YouTube
-- Social media
-- Blogs and newsletters
-- Creator networks
+### Section 3 — Featured Spotlight
+"NOW DEVELOPING" label + Creative House Productions spotlight. Links to `/studio` (Enter Production Studio) and `/movements` (View Current Projects).
 
-This ensures credible stories do not remain hidden.
+### Section 4 — Proof in the Network
+SVG world map with 3 pinging gold anchor points (IDLW, The Simple Plan, Advo-Cassie). Dashed connection lines between points. Each point navigates to `/movements/{slug}`.
+
+**Phase 2:** Connect to Supabase Credibility Spine — same pattern as IDLW Lobby constellation (live data, real anchor points from DB).
+
+### Section 5 — Footer
+Mirrors IDLW footer structure. CHS branding, Film icon, gold accent `#C9972A`. Links: Movements / Production / Voices / Collaborate.
 
 ---
 
-## The Creative House Lobby
+## Color System
 
-The Creative House site itself is the master lobby.
+| Token | Value | Adapted From |
+|-------|-------|-------------|
+| Primary gold | `#C9972A` | IDLW teal `#007C91` |
+| Dark band | `#1C1410` / `#2A1F14` | IDLW dark sections |
+| Near-black | `#0A0A0A` / `#050505` | Shared |
+| Card glass | `bg-white/[0.08] backdrop-blur-md` | Shared |
 
-From here visitors can explore:
+---
 
-- Projects
-- Creator voices
-- Story collections
-- Collaboration opportunities
+## The Studio Sub-Section
 
-The lobby introduces visitors to the network of movements Creative House supports.
+`/studio` expands into a full sub-section with its own header navigation:
+
+| Route | Page |
+|-------|------|
+| `/studio` | Landing page |
+| `/studio/productions` | Blind Ambition, Blind Adventures, Thirst |
+| `/studio/projects` | Links to the 3 movement universes |
+| `/studio/systems` | 3-layer infrastructure explainer |
+| `/studio/about` | Philosophy and mission |
+
+---
+
+## The Story Universes (Movement Pages)
+
+Each story universe has a dedicated page at `/movements/{slug}` with:
+- Full-screen video background
+- Status badge (Active / In Development)
+- Description and project copy from the original project pages
+- External links (website, YouTube, app) where applicable
+
+| Slug | Movement | Status |
+|------|----------|--------|
+| `idlw` | I Drink Living Water | Active — Evolving Platform |
+| `simple-plan` | The Simple Plan | Active — Sponsored by the Misty Foundation |
+| `advo-cassie` | Advo-Cassie | In Development — Seeking Aligned Sponsor |
+
+---
+
+## Tech Stack
+
+- **Framework:** React + Vite + TypeScript
+- **Routing:** React Router DOM v7
+- **Styling:** Tailwind CSS (arbitrary values)
+- **Deployment:** Vercel (`shelly-chss-projects` scope)
+- **Repository:** GitHub — `CreativeHouseStudios/creative-house-lobby`
+
+---
+
+## Phase 2 Roadmap
+
+1. **Build `/production` route** — dedicated page separate from Studio sub-section
+2. **Connect constellation to Supabase Credibility Spine** — live anchor points from DB (same pattern as IDLW)
+3. **Rename Vercel project** to `creative-house-lobby` for clean URL
+4. **Clean up `/src/components/lobby/`** — unused remnants from earlier iteration
+5. **Add Voices Network pages** — currently a placeholder route
+6. **Move remaining first-project content** into this shell (layer by layer)
+
+---
+
+## Infrastructure Relationship
+
+```
+creativehouse.app (this lobby)
+├── /movements          → Story Universes index
+│   ├── /idlw           → I Drink Living Water ──→ idrinklivingwater.com
+│   ├── /simple-plan    → The Simple Plan ─────→ thesimpleplan.app
+│   └── /advo-cassie    → Advo-Cassie ──────────→ advo-cassie.app (future)
+├── /studio             → Production Studio sub-section
+├── /voices             → Creator Network (placeholder)
+└── /collaborate        → Work With Us
+```
+
+---
+
+## The Credibility Spine (Phase 2)
+
+The Credibility Spine is the data layer that powers all Creative House story universes.
+
+It collects and organizes stories, sources, research, and creator contributions into a structured Supabase database. Stories are mapped geographically and categorized by theme, allowing movements to demonstrate reach and legitimacy.
+
+**Phase 2 task:** Connect the CHS Lobby constellation (Section 4) to this spine — pulling live anchor points from Supabase, matching the IDLW Lobby pattern.
 
 ---
 
 ## Mission
 
 Creative House exists to amplify stories that matter and build the infrastructure that helps them reach the world.
+
+The lobby is the door. Everything else is the infrastructure behind it.
