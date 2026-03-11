@@ -1,122 +1,182 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Film, Layers, Radio } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { StudioHeader } from '../../components/studio/StudioHeader';
 
-const pillars = [
+const productions = [
   {
-    icon: Film,
-    label: 'Film Production',
-    description: 'Documentaries, long-form films, and story-driven content.',
+    title: 'Blind Ambition',
+    subtitle: 'Adventure Documentary Series',
+    description:
+      'An international documentary series following blind athlete Chad Foster as he takes on extreme challenges across the world.',
+    locations: ['Rome', 'Paris', 'Dubai', 'Kilimanjaro'],
+    status: 'Development',
+    statusColor: 'text-amber-400 border-amber-800 bg-amber-950/30',
   },
   {
-    icon: Radio,
-    label: 'Story Amplification',
-    description: 'Distribution systems that move credible stories across platforms.',
+    title: 'Blind Adventures',
+    subtitle: 'Documentary Series',
+    description:
+      'A documentary adventure series exploring resilience, accessibility, and global exploration.',
+    locations: [],
+    status: 'Broadcast',
+    statusColor: 'text-emerald-400 border-emerald-800 bg-emerald-950/30',
   },
   {
-    icon: Layers,
-    label: 'Credibility Infrastructure',
-    description: 'The data layer that organizes, maps, and verifies every story.',
+    title: 'Thirst',
+    subtitle: 'Investigative Documentary',
+    description:
+      'Investigative documentary exploring water sovereignty and systemic failures in water infrastructure.',
+    locations: [],
+    status: 'Development',
+    statusColor: 'text-amber-400 border-amber-800 bg-amber-950/30',
   },
 ];
 
 export function StudioLandingPage() {
   return (
-    <div className="min-h-screen bg-zinc-950">
+    <div className="relative min-h-screen">
       <StudioHeader />
 
-      {/* ── HERO ── */}
-      <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
-        {/* Background texture */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_50%,rgba(255,255,255,0.03),transparent_60%)] pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_50%,rgba(255,255,255,0.02),transparent_60%)] pointer-events-none" />
+      {/* ── FIXED VIDEO BACKGROUND ─────────────────────────────────────────── */}
+      <div className="fixed inset-0 overflow-hidden motion-reduce:hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ filter: 'saturate(0.6) brightness(0.7)' }}
+        >
+          <source src="/00-Hero-cover.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-zinc-950/80" />
+        <div
+          className="absolute inset-0"
+          style={{ background: 'radial-gradient(ellipse at center, transparent 0%, transparent 40%, rgba(9, 9, 11, 0.4) 100%)' }}
+        />
+      </div>
 
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-24">
-          <p className="text-xs tracking-[0.4em] text-zinc-500 uppercase mb-8">
-            Creative House Studios
-          </p>
-          <h1 className="text-6xl md:text-8xl text-zinc-50 font-light tracking-tight leading-none mb-6 max-w-4xl">
-            The Studio
-          </h1>
-          <p className="text-2xl md:text-3xl text-zinc-400 font-light italic mb-8 max-w-2xl leading-relaxed">
-            "The infrastructure behind story movements."
-          </p>
-          <p className="text-lg text-zinc-400 font-light leading-relaxed max-w-2xl mb-16">
-            Creative House Studios is a hybrid of film production, story amplification, and credibility infrastructure. We don't just make films — we build the systems that help stories reach the world.
-          </p>
+      <div className="motion-reduce:block hidden fixed inset-0 bg-zinc-950" />
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              to="/studio/productions"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-zinc-50 text-zinc-950 rounded-sm hover:bg-zinc-200 transition-all duration-300 text-sm font-medium group"
-            >
-              View Productions
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/studio/projects"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-zinc-700 text-zinc-200 rounded-sm hover:bg-zinc-900 hover:border-zinc-500 transition-all duration-300 text-sm font-light group"
-            >
-              Explore Projects
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/studio/about"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-zinc-800 text-zinc-400 rounded-sm hover:bg-zinc-900 hover:border-zinc-600 hover:text-zinc-200 transition-all duration-300 text-sm font-light group"
-            >
-              About the Studio
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
+      <div className="relative">
+
+        {/* ── HERO ─────────────────────────────────────────────────────────── */}
+        <section className="pt-48 pb-32 px-6 md:px-12 max-w-[1000px] mx-auto">
+          <div className="text-center">
+            <p className="text-xs tracking-[0.4em] text-zinc-500 uppercase mb-8">
+              Creative House Studios
+            </p>
+            <h1 className="text-6xl md:text-7xl mb-6 text-zinc-50 font-light leading-tight">
+              Creative House Productions
+            </h1>
+            <p className="text-xl md:text-2xl text-zinc-300 font-light leading-relaxed max-w-2xl mx-auto">
+              Stories that move people.<br />
+              Systems that move culture.
+            </p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ── THREE PILLARS ── */}
-      <section className="py-24 px-6 md:px-12 border-t border-zinc-900">
-        <div className="max-w-[1400px] mx-auto">
-          <p className="text-xs tracking-[0.3em] text-zinc-600 uppercase mb-16">What Creative House Builds</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pillars.map(({ icon: Icon, label, description }) => (
-              <div key={label} className="group p-8 border border-zinc-900 hover:border-zinc-700 rounded-sm hover:bg-zinc-900/30 transition-all duration-300">
-                <Icon className="w-8 h-8 text-zinc-600 group-hover:text-zinc-400 mb-6 transition-colors" strokeWidth={1.5} />
-                <h3 className="text-xl text-zinc-200 font-light mb-3">{label}</h3>
-                <p className="text-sm text-zinc-600 font-light leading-relaxed group-hover:text-zinc-500 transition-colors">{description}</p>
-              </div>
-            ))}
+        {/* ── CURRENT SLATE ────────────────────────────────────────────────── */}
+        <section className="py-16 px-6 md:px-12 border-t border-zinc-900">
+          <div className="max-w-[1400px] mx-auto">
+            <div className="mb-12">
+              <p className="text-xs tracking-[0.3em] text-zinc-600 uppercase">Current Slate</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {productions.map((p) => (
+                <div
+                  key={p.title}
+                  className="group backdrop-blur-md bg-white/[0.04] border border-zinc-800 rounded-sm p-8 hover:border-zinc-600 hover:bg-white/[0.07] transition-all duration-300 flex flex-col justify-between min-h-[340px]"
+                >
+                  {/* Status badge */}
+                  <div className="flex items-start justify-between mb-8">
+                    <div className="w-8 h-px bg-zinc-700 group-hover:bg-zinc-500 transition-colors duration-300 mt-3" />
+                    <span className={`text-xs tracking-widest uppercase px-3 py-1 border rounded-sm font-light ${p.statusColor}`}>
+                      {p.status}
+                    </span>
+                  </div>
+
+                  {/* Title block */}
+                  <div className="flex-1">
+                    <h3 className="text-2xl text-zinc-100 font-light mb-1 group-hover:text-white transition-colors duration-300">
+                      {p.title}
+                    </h3>
+                    <p className="text-xs tracking-[0.2em] text-zinc-600 uppercase mb-5 font-light">
+                      {p.subtitle}
+                    </p>
+                    <p className="text-sm text-zinc-400 font-light leading-relaxed group-hover:text-zinc-300 transition-colors duration-300">
+                      {p.description}
+                    </p>
+                  </div>
+
+                  {/* Locations */}
+                  {p.locations.length > 0 && (
+                    <div className="mt-8 pt-6 border-t border-zinc-900 flex flex-wrap gap-3">
+                      {p.locations.map((loc) => (
+                        <span key={loc} className="text-xs text-zinc-600 tracking-widest uppercase font-light">
+                          {loc}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ── QUICK LINKS ── */}
-      <section className="py-24 px-6 md:px-12 border-t border-zinc-900">
-        <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-px bg-zinc-900">
-          {[
-            { to: '/studio/productions', label: 'Productions', sub: 'Films & documentaries' },
-            { to: '/studio/systems', label: 'Systems', sub: 'The infrastructure layer' },
-            { to: '/studio/about', label: 'About', sub: 'Philosophy & mission' },
-          ].map(({ to, label, sub }) => (
-            <Link
-              key={to}
-              to={to}
-              className="group flex flex-col justify-between p-10 bg-zinc-950 hover:bg-zinc-900 transition-colors duration-300"
-            >
+        {/* ── THE STUDIO ───────────────────────────────────────────────────── */}
+        <section className="py-24 px-6 md:px-12 border-t border-zinc-900">
+          <div className="max-w-[900px] mx-auto">
+            <div className="mb-12">
+              <p className="text-xs tracking-[0.3em] text-zinc-600 uppercase">The Studio</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              {/* What we combine */}
               <div>
-                <h3 className="text-2xl text-zinc-300 font-light mb-2 group-hover:text-zinc-100 transition-colors">{label}</h3>
-                <p className="text-sm text-zinc-600 font-light">{sub}</p>
+                <p className="text-lg text-zinc-400 font-light mb-8 leading-relaxed">
+                  Creative House Productions combines:
+                </p>
+                <div className="pl-6 border-l-2 border-zinc-800 space-y-4">
+                  <p className="text-base text-zinc-300 font-light">Documentary filmmaking</p>
+                  <p className="text-base text-zinc-300 font-light">AI-assisted production workflows</p>
+                  <p className="text-base text-zinc-300 font-light">Lightweight global production crews</p>
+                  <p className="text-base text-zinc-300 font-light">Digital distribution infrastructure</p>
+                </div>
               </div>
-              <ArrowRight className="w-4 h-4 text-zinc-700 group-hover:text-zinc-400 group-hover:translate-x-1 transition-all duration-300 mt-8" />
-            </Link>
-          ))}
-        </div>
-      </section>
 
-      {/* ── FOOTER ── */}
-      <footer className="py-12 px-6 md:px-12 border-t border-zinc-900">
-        <div className="max-w-[1400px] mx-auto flex items-center justify-between">
-          <p className="text-zinc-700 text-sm">© {new Date().getFullYear()} Creative House Studios</p>
-          <Link to="/" className="text-zinc-600 hover:text-zinc-300 text-sm transition-colors">← Back to Lobby</Link>
-        </div>
-      </footer>
+              {/* Leadership */}
+              <div>
+                <p className="text-xs tracking-[0.3em] text-zinc-600 uppercase mb-8">Leadership</p>
+                <div className="space-y-8">
+                  <div>
+                    <p className="text-xl text-zinc-100 font-light mb-1">Glen Kerby</p>
+                    <p className="text-sm text-zinc-500 font-light tracking-wide">Director · Producer</p>
+                  </div>
+                  <div>
+                    <p className="text-xl text-zinc-100 font-light mb-1">Shelly Frank</p>
+                    <p className="text-sm text-zinc-500 font-light tracking-wide">Executive Producer · Systems Architect</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── FOOTER ───────────────────────────────────────────────────────── */}
+        <footer className="py-12 px-6 md:px-12 border-t border-zinc-900">
+          <div className="max-w-[1400px] mx-auto flex items-center justify-between">
+            <p className="text-zinc-700 text-sm">© {new Date().getFullYear()} Creative House Studios</p>
+            <Link to="/" className="inline-flex items-center gap-2 text-zinc-600 hover:text-zinc-300 text-sm transition-colors">
+              <ArrowLeft className="w-3 h-3" />
+              Back to Lobby
+            </Link>
+          </div>
+        </footer>
+
+      </div>
     </div>
   );
 }
