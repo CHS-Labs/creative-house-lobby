@@ -101,7 +101,7 @@ export function CreativeHouseLobby() {
             onClick={scrollToDoors}
             className="px-10 py-3 bg-white/10 backdrop-blur-sm border border-white/60 rounded-sm text-white hover:bg-white hover:text-[#0A0A0A] transition-all duration-300 text-base font-light shadow-lg"
           >
-            Enter the Lobby
+            A Message from Us
           </button>
         </div>
 
