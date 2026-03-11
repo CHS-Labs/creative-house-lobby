@@ -374,14 +374,17 @@ export function CreativeHouseLobby() {
       {/* ── MESSAGE MODAL ────────────────────────────────────────────────── */}
       {modalOpen && (
         <div
-          className="fixed inset-0 z-50 flex items-start justify-center p-4 md:p-8 overflow-y-auto"
+          className="fixed inset-0 z-50 overflow-y-auto"
           style={{ animation: 'fadeIn 0.3s ease' }}
         >
           {/* Backdrop */}
           <div
-            className="absolute inset-0 bg-black/85 backdrop-blur-sm"
+            className="fixed inset-0 bg-black/85 backdrop-blur-sm"
             onClick={closeModal}
           />
+
+          {/* Scroll content wrapper — starts at top */}
+          <div className="flex min-h-full items-start justify-center p-4 md:p-8">
 
           {/* Panel */}
           <div className="relative w-full max-w-4xl bg-zinc-950 border border-zinc-800 rounded-sm shadow-2xl overflow-hidden">
@@ -450,6 +453,8 @@ export function CreativeHouseLobby() {
               </div>
             </div>
           </div>
+
+          </div>{/* end scroll content wrapper */}
         </div>
       )}
 
