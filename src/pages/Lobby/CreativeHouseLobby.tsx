@@ -164,17 +164,36 @@ export function CreativeHouseLobby() {
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {/* Film strip edge — top */}
-                  <div className="absolute top-0 left-0 right-0 h-7 bg-zinc-900/70 border-b border-zinc-700/40 flex items-center justify-around px-4 pointer-events-none">
-                    {Array.from({ length: 8 }).map((_, i) => (
-                      <div key={i} className="w-3 h-[11px] bg-zinc-950 border border-zinc-600/50 rounded-[2px]" />
+                  <div
+                    className="absolute top-0 left-0 right-0 h-8 flex items-center justify-around px-3 pointer-events-none"
+                    style={{ background: 'linear-gradient(to bottom, rgba(40,28,10,0.95), rgba(28,18,6,0.90))', borderBottom: '1px solid rgba(201,151,42,0.25)' }}
+                  >
+                    {Array.from({ length: 9 }).map((_, i) => (
+                      <div
+                        key={i}
+                        className="w-3 h-[13px] rounded-[2px]"
+                        style={{ background: 'rgba(5,5,5,0.95)', border: '1px solid rgba(201,151,42,0.30)', boxShadow: 'inset 0 0 3px rgba(0,0,0,0.8)' }}
+                      />
                     ))}
                   </div>
                   {/* Film strip edge — bottom */}
-                  <div className="absolute bottom-0 left-0 right-0 h-7 bg-zinc-900/70 border-t border-zinc-700/40 flex items-center justify-around px-4 pointer-events-none">
-                    {Array.from({ length: 8 }).map((_, i) => (
-                      <div key={i} className="w-3 h-[11px] bg-zinc-950 border border-zinc-600/50 rounded-[2px]" />
+                  <div
+                    className="absolute bottom-0 left-0 right-0 h-8 flex items-center justify-around px-3 pointer-events-none"
+                    style={{ background: 'linear-gradient(to top, rgba(40,28,10,0.95), rgba(28,18,6,0.90))', borderTop: '1px solid rgba(201,151,42,0.25)' }}
+                  >
+                    {Array.from({ length: 9 }).map((_, i) => (
+                      <div
+                        key={i}
+                        className="w-3 h-[13px] rounded-[2px]"
+                        style={{ background: 'rgba(5,5,5,0.95)', border: '1px solid rgba(201,151,42,0.30)', boxShadow: 'inset 0 0 3px rgba(0,0,0,0.8)' }}
+                      />
                     ))}
                   </div>
+                  {/* Film grain overlay */}
+                  <div
+                    className="absolute inset-0 pointer-events-none opacity-[0.04]"
+                    style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.85\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23n)\'/%3E%3C/svg%3E")', backgroundSize: '160px 160px' }}
+                  />
 
                   {/* Ripple on hover */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
