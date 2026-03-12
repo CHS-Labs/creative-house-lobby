@@ -16,7 +16,7 @@ const movements = [
   {
     id: 2,
     title: 'The Simple Plan',
-    description: 'Political reform through credible voices and clear narratives.',
+    description: 'Addiction recovery through credible voices and clear narratives.',
     icon: Scale,
     slug: 'simple-plan',
     accent: 'from-amber-900/30 to-yellow-900/10',
@@ -59,14 +59,14 @@ export function MovementConstellation() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {movements.map((movement, index) => {
             const Icon = movement.icon;
             return (
               <button
                 key={movement.id}
                 onClick={() => navigate(`/movements/${movement.slug}`)}
-                className={`group relative bg-zinc-900/60 backdrop-blur-sm p-10 rounded-xl border border-zinc-800 ${movement.borderHover} transition-all duration-500 hover:-translate-y-2 text-left overflow-hidden`}
+                className={`group relative bg-zinc-900/60 backdrop-blur-sm p-14 rounded-xl border border-zinc-800 ${movement.borderHover} transition-all duration-500 hover:-translate-y-2 text-left overflow-hidden`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {/* Background gradient on hover */}
@@ -76,27 +76,27 @@ export function MovementConstellation() {
                 <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 {/* Icon */}
-                <div className="relative mb-8">
+                <div className="relative mb-10">
                   <div
-                    className="absolute -inset-3 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    className="absolute -inset-4 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                     style={{ background: movement.glowColor }}
                   />
                   <Icon
-                    className={`relative w-10 h-10 ${movement.iconColor} transition-all duration-500 group-hover:scale-110`}
+                    className={`relative w-14 h-14 ${movement.iconColor} transition-all duration-500 group-hover:scale-110`}
                     strokeWidth={1.5}
                   />
                 </div>
 
                 {/* Content */}
-                <h3 className="relative text-2xl text-zinc-100 font-light mb-3 group-hover:text-white transition-colors duration-300">
+                <h3 className="relative text-3xl text-zinc-100 font-light mb-4 group-hover:text-white transition-colors duration-300">
                   {movement.title}
                 </h3>
-                <p className="relative text-sm text-zinc-500 font-light leading-relaxed group-hover:text-zinc-400 transition-colors duration-300">
+                <p className="relative text-base text-zinc-500 font-light leading-relaxed group-hover:text-zinc-400 transition-colors duration-300">
                   {movement.description}
                 </p>
 
                 {/* Bottom arrow */}
-                <div className="relative mt-8 flex items-center gap-2 text-xs tracking-widest uppercase text-zinc-600 group-hover:text-zinc-300 transition-colors duration-300">
+                <div className="relative mt-10 flex items-center gap-2 text-xs tracking-widest uppercase text-zinc-600 group-hover:text-zinc-300 transition-colors duration-300">
                   Enter Universe
                   <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
                 </div>
