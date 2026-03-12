@@ -259,18 +259,12 @@ export function CreativeHouseLobby() {
             Films, documentaries, and story-driven media now taking shape across the Creative House network.
           </p>
 
-          <div className="mt-8 mb-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="mt-8 mb-10 flex items-center justify-center">
             <Link
               to="/studio"
               className="inline-flex items-center gap-2 px-8 py-3 bg-white/10 backdrop-blur-sm border border-white/40 rounded-sm text-white hover:bg-white hover:text-[#0A0A0A] transition-all duration-300 text-base font-light"
             >
               Enter Production Studio
-            </Link>
-            <Link
-              to="/movements"
-              className="text-[#C9972A] hover:text-white transition-colors duration-300 text-sm font-light underline underline-offset-4"
-            >
-              View Current Projects
             </Link>
           </div>
         </div>
