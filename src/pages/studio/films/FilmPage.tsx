@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
-import { StudioHeader } from '../../components/studio/StudioHeader';
-import { getProductionBySlug } from '../../data/productions';
+import { StudioHeader } from '../../../components/studio/StudioHeader';
+import { getProductionBySlug } from '../../../data/productions';
 
 export function FilmPage() {
   const { slug } = useParams<{ slug: string }>();
