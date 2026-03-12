@@ -165,27 +165,27 @@ export function CreativeHouseLobby() {
                 >
                   {/* Film strip edge — top */}
                   <div
-                    className="absolute top-0 left-0 right-0 h-8 flex items-center justify-around px-3 pointer-events-none"
-                    style={{ background: 'linear-gradient(to bottom, rgba(40,28,10,0.95), rgba(28,18,6,0.90))', borderBottom: '1px solid rgba(201,151,42,0.25)' }}
+                    className="absolute top-0 left-0 right-0 h-9 flex items-center justify-around px-6 pointer-events-none"
+                    style={{ background: 'linear-gradient(to bottom, rgba(35,22,6,0.98), rgba(22,13,3,0.95))', borderBottom: '1.5px solid rgba(201,151,42,0.35)' }}
                   >
-                    {Array.from({ length: 9 }).map((_, i) => (
+                    {Array.from({ length: 8 }).map((_, i) => (
                       <div
                         key={i}
-                        className="w-3 h-[13px] rounded-[2px]"
-                        style={{ background: 'rgba(5,5,5,0.95)', border: '1px solid rgba(201,151,42,0.30)', boxShadow: 'inset 0 0 3px rgba(0,0,0,0.8)' }}
+                        className="w-[16px] h-[11px] rounded-[1px]"
+                        style={{ background: 'rgba(3,3,3,0.98)', border: '1.5px solid rgba(201,151,42,0.55)', boxShadow: 'inset 0 1px 4px rgba(0,0,0,1), 0 0 4px rgba(201,151,42,0.08)' }}
                       />
                     ))}
                   </div>
                   {/* Film strip edge — bottom */}
                   <div
-                    className="absolute bottom-0 left-0 right-0 h-8 flex items-center justify-around px-3 pointer-events-none"
-                    style={{ background: 'linear-gradient(to top, rgba(40,28,10,0.95), rgba(28,18,6,0.90))', borderTop: '1px solid rgba(201,151,42,0.25)' }}
+                    className="absolute bottom-0 left-0 right-0 h-9 flex items-center justify-around px-6 pointer-events-none"
+                    style={{ background: 'linear-gradient(to top, rgba(35,22,6,0.98), rgba(22,13,3,0.95))', borderTop: '1.5px solid rgba(201,151,42,0.35)' }}
                   >
-                    {Array.from({ length: 9 }).map((_, i) => (
+                    {Array.from({ length: 8 }).map((_, i) => (
                       <div
                         key={i}
-                        className="w-3 h-[13px] rounded-[2px]"
-                        style={{ background: 'rgba(5,5,5,0.95)', border: '1px solid rgba(201,151,42,0.30)', boxShadow: 'inset 0 0 3px rgba(0,0,0,0.8)' }}
+                        className="w-[16px] h-[11px] rounded-[1px]"
+                        style={{ background: 'rgba(3,3,3,0.98)', border: '1.5px solid rgba(201,151,42,0.55)', boxShadow: 'inset 0 1px 4px rgba(0,0,0,1), 0 0 4px rgba(201,151,42,0.08)' }}
                       />
                     ))}
                   </div>
