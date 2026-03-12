@@ -149,7 +149,7 @@ export function CreativeHouseLobby() {
               Choose Your Path
             </h2>
             <p className="text-xl text-white/90 font-light">
-              Each door leads somewhere different.
+              Each frame leads to a different lens.
             </p>
           </div>
 
