@@ -9,7 +9,7 @@ import { WorkWithUs } from './pages/WorkWithUs';
 import { WorkWithUsPage } from './pages/WorkWithUsPage';
 import { VoicesIntroPage } from './pages/VoicesIntroPage';
 import { StudioLandingPage } from './pages/studio/StudioLandingPage';
-import { ProductionsPage } from './pages/studio/ProductionsPage';
+import { FilmPage } from './pages/studio/films/FilmPage';
 import { SystemsPage } from './pages/studio/SystemsPage';
 import { AboutPage } from './pages/studio/AboutPage';
 
@@ -33,8 +33,8 @@ function App() {
         <Route path="/voices" element={<CreatorNetwork />} />
         <Route path="/voices-intro" element={<VoicesIntroPage />} />
         <Route path="/studio" element={<StudioLandingPage />} />
-        <Route path="/studio/productions" element={<ProductionsPage />} />
-        <Route path="/studio/projects" element={<Navigate to="/movements" replace />} />
+        <Route path="/studio/films/:slug" element={<FilmPage />} />
+        <Route path="/studio/productions" element={<Navigate to="/studio" replace />} />
         <Route path="/studio/overview" element={<Navigate to="/studio/about" replace />} />
         <Route path="/studio/systems" element={<SystemsPage />} />
         <Route path="/studio/about" element={<AboutPage />} />

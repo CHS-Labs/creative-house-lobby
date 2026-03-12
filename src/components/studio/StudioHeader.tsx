@@ -2,9 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 
 const studioNav = [
-  { to: '/studio', label: 'Overview' },
-  { to: '/studio/productions', label: 'Productions' },
-  { to: '/studio/projects', label: 'Projects' },
+  { to: '/studio', label: 'Studio' },
   { to: '/studio/systems', label: 'Systems' },
   { to: '/studio/about', label: 'About' },
 ];

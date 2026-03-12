@@ -28,6 +28,14 @@ const sections = [
       'This architecture ensures that every story we build for has a persistent, structured path to reach its intended audience — regardless of individual platform changes or algorithm shifts.',
     ],
   },
+  {
+    label: 'The Production Studio',
+    heading: 'How we make films.',
+    body: [
+      'Creative House Productions combines documentary filmmaking with AI-assisted production workflows, lightweight global production crews, and digital distribution infrastructure.',
+      'The result is a production model built for the next era of storytelling — where independent voices can reach global audiences without sacrificing quality or creative control.',
+    ],
+  },
 ];
 
 export function AboutPage() {
@@ -42,7 +50,7 @@ export function AboutPage() {
             <p className="text-xs tracking-[0.3em] text-zinc-600 uppercase mb-4">Creative House Studios</p>
             <h1 className="text-5xl md:text-7xl text-zinc-100 font-light mb-6">About</h1>
             <p className="text-xl text-zinc-400 font-light italic leading-relaxed">
-              "We don't just make films. We build the systems that help stories reach the world."
+              &ldquo;We don&rsquo;t just make films. We build the systems that help stories reach the world.&rdquo;
             </p>
             <p className="text-sm tracking-[0.2em] text-zinc-500 uppercase mt-6">
               Stories that move people. Systems that move culture.
@@ -64,6 +72,21 @@ export function AboutPage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Leadership */}
+          <div className="py-16 border-t border-zinc-900">
+            <p className="text-xs tracking-[0.3em] text-zinc-600 uppercase mb-6">Leadership</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <div>
+                <p className="text-xl text-zinc-100 font-light mb-1">Glen Kerby</p>
+                <p className="text-sm text-zinc-500 font-light tracking-wide">Director · Producer</p>
+              </div>
+              <div>
+                <p className="text-xl text-zinc-100 font-light mb-1">Shelly Frank</p>
+                <p className="text-sm text-zinc-500 font-light tracking-wide">Executive Producer · Systems Architect</p>
+              </div>
+            </div>
           </div>
 
           {/* Closing CTA */}
